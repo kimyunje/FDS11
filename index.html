@@ -12,6 +12,7 @@
     <title>웹카페 - HTML-5, CSS3, 웹접근성</title>
     <!-- 특수문자나, 환영합니다 등의 불필요한 장식 문구를 넣지 말기, 검색순위에 밀리게 된다. -->
     <link rel="shortcut icon" href="images/common/webcafe.ico" type="image/x-icon">
+    <link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/style-float.css"> -->
 </head>
@@ -45,23 +46,23 @@
         <nav class="navigation">
             <h2 class="readable-hidden">메인메뉴</h2>
             <ul class="menu">
-                <li class="menu-item" tabindex="0">
-                    <span class="menu-item-text">HTML에 대해</span>
+                <li class="menu-item">
+                    <span class="menu-item-text">HTML에대해</span>
                     <ul class="sub-menu">
                         <li><a href="#">HTML5 소개</a></li>
                         <li><a href="#">레퍼런스 소개</a></li>
                         <li><a href="#">활용예제</a></li>
                     </ul>
                 </li>
-                <li class="menu-item" tabindex="0">
-                    <span class="menu-item-text">CSS에 대해</span>
+                <li class="menu-item">
+                    <span class="menu-item-text">CSS에대해</span>
                     <ul class="sub-menu">
                         <li><a href="#">CSS 소개</a></li>
                         <li><a href="#">CSS2 VS CSS3</a></li>
                         <li><a href="#">CSS 애니메이션</a></li>
                     </ul>
                 </li>
-                <li class="menu-item" tabindex="0">
+                <li class="menu-item">
                     <span class="menu-item-text">웹표준</span>
                     <ul class="sub-menu">
                         <li><a href="#">웹표준이란?</a></li>
@@ -69,7 +70,7 @@
                         <li><a href="#">HTML5의 현재와 미래</a></li>
                     </ul>
                 </li>
-                <li class="menu-item" tabindex="0">
+                <li class="menu-item">
                     <span class="menu-item-text">웹접근성</span>
                     <ul class="sub-menu">
                         <li><a href="#">웹 접근성의 개요</a></li>
@@ -78,8 +79,8 @@
                         <li><a href="#">웹 접근성 품질마크</a></li>
                     </ul>
                 </li>
-                <li class="menu-item" tabindex="0">
-                    <span class="menu-item-text">묻고 답하기</span>
+                <li class="menu-item">
+                    <span class="menu-item-text">묻고답하기</span>
                     <ul class="sub-menu">
                         <li><a href="#">묻고 답하기</a></li>
                         <li><a href="#">FAQ</a></li>
@@ -88,7 +89,7 @@
                         <li><a href="#">웹 접근성</a></li>
                     </ul>
                 </li>
-                <li class="menu-item" tabindex="0">
+                <li class="menu-item">
                     <span class="menu-item-text">자료실</span>
                     <ul class="sub-menu">
                         <li><a href="#">공개 자료실</a></li>
@@ -121,6 +122,8 @@
         <!-- 하나하나가 block레벨 태그라서 줄바꿈된다. -->
         <!-- 섹션인 태그:section, nav, article -->
     </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="js/webcafe.js"></script>
+    <!-- defer는 실행 시점을 다르게 해준다. -->
 </body>
-
 </html>

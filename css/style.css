@@ -3,6 +3,7 @@
 /* noto sans 폰트 코드 */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700");
 /* import 안하면 난독 처리가 된다. */
+@import url("fonts.css");
 
 /* 스타일 초기화 */
 html, body, div, span, applet, object, iframe,
@@ -118,7 +119,9 @@ a{
   position: absolute;
   top: 50px;
   left: 65px;
+  z-index: 100;
 }
+/* z-index로 menu-item의 relative를 이기게 만들어준다. 밑에 있다가 앞으로! */
 /* 멤버링크 */
 .member{
   text-align: right;
@@ -174,14 +177,105 @@ a{
   /* -45도의 각도로 그라데이션된다. */
   /* 둘다 background로 단축 표기할 시에는 폴백컬러가 그라디언트에 앞서야 한다. */
   border-top: 2px solid #000;
-  padding-left: 255px;
+  padding-left: 225px;
+  /* height: 47px; */
+  /* menu item에서 높이를 가져서 필요 없어진다. */
   height: 47px;
+  /* overflow: hidden; */
+  /*block이 생겨서 높이 생긴다. 잃어버린 높이를 찾아줘야 그라이언트 컬러가 들어간다. */
+  /* 그런데 이걸 쓰게 될 경우에는 sub-item이 벗어난 부분을 잘라서 보여준다. */
+  /* 그래서 높이를 직접준다. */
   border-radius: 0 0 5px 5px;
   /* 모서리를 둥글게 */
   /* 완만한 모서리를 만들기 위해서는 x축 y축을 사용해야한다. */
   /* 레디우스의 최대값은 상자 사이즈의 절반값이다. 그 이상으로는 결과가 나오지 않는다. */
 }
+/* relative를 떠있기 때문에 로고를 덮게 된다.(z-index의 영향으로 먼저 만들어진것이 밑으로) */
+.menu-item{
+  /* height: 45px; */
+  /*boder선이  부모 값 만큼 늘어나도록*/
+  /* menu-item-text에서 block으로 설정해서... 필요 없어짐 */
+  position: relative;
+  float: left;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+.menu-item:focus, .sub-menu a:focus{
+  outline: 0;
+}
+.menu-act .menu-item-text{
+  color: #ff0;
+}
+.menu-act .menu-item-text::after{
+  content:"";
+  display: block;
+  /* 밑줄 긋기 */
+  /* 1번 방법 border-top: 2px soid #000; */
+  /* 2번 방법 background: #000;
+  height: 2px; */
+  border-bottom: 2px solid #000;
+  /* 높이가 0이라서 위아래 상관 ㄴㄴ */
+}
+/* 가상 요소 만듬 */
+.menu-item-text{
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 
+  1px 1px 0 #000, 
+  0 1px 0 #000,
+  -1px 0 0 #000,
+  0 -1px 0 #000;
+  padding: 0 20px;
+  display: block;
+  line-height: 45px;
+  /* 높이 45px, 라인 하트 45하면 상자 가운데 정렬인 것 처럼 사용된다.*/
+}
+/* text-shadow: 1px 1px 0 #000; 글자 그림자 넣기  오른쪽 하단 1px 블러값 0 색깔 검정*/
+/* menu의 직계자식인 li만 선택하겠다. */
 
+/* 기준을 menu으로 바꾸기 위해 relative를 주기. */
+.sub-menu{
+  position: absolute;
+  top: 47px;
+  /* display: flex;
+  top: 45px;
+  left:0;
+  width: 500px; */
+  /* 0을 써줘야 하는 이유: 구버전 브라우저 같은 경우, float상에서 줄 바뀜이 될 때 마치 앞에 텍스트가 있는 것 처럼 밀어냄 */
+  /* top 대신 margin-top으로 해줄 경우에 박스가 실제로 있는 것을 인식되어 menu-item선택시 sub-item을 선택한 걸로 될수도 있다. */
+  /* 좋은 코드 아님 */
+  display: none;
+  white-space: nowrap;
+}
+.menu-item:nth-child(-n+3) .sub-menu{
+  left:0;
+}
+.menu-item:nth-child(n+4) .sub-menu{
+  right:0;
+}
+/* 화이트 스페이스는 줄바꿈을 하지 않겠다는 의미! */
+.sub-menu li, .sub-menu a{
+  display: inline-block
+}
+/* su-menu를 블럭 성격을 주어 떨어지도록 만들어주자 */
+/* .sub-menu a{
+  padding: 8px 0;
+  margin-right: 10px;
+}
+.sub-menu a::before{
+  font-family:"webcafeIcon";
+  content:"r";
+  position: relative;
+  top:2px;
+}
+.sub-menu a:hover::before,
+.sub-menu a:focus::before{
+  content:"c";
+} */
+
+.menu-act .sub-menu{
+  display: block;
+}
 /* 비주얼 */
 .visual{
   background-color: lime;
