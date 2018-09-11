@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>포지션 속성</title>
+    <style>
+    .shadow{
+        background-color: black;
+        width: 500px;
+    }
+    h2{
+        background-color: yellow;
+        height: 200px;
+        position: relative;
+        top: -10px;
+        left: -10px;
+    }
+    /* position이 static이라 마진이 안먹는다. */
+    p{
+        background-color: pink;
+        position: absolute;
+        top: 100px;
+        left: 200px;
+        z-index: 10;
+        /* absolute은 layer라고 보면 된다. */
+        /* layer는 만든순서대로 쌓인다. */
+        /* absolute는 자신의 상위 요소 중에서너 static이 아닌 것을 기준으로 한다 */
+    }
+    span{
+        background-color: skyblue;
+        position: fixed;
+        top: 50px;
+        right: 50px;
+    }
+    /* fix */
+    </style>
+</head>
+<body>
+    <div>
+        <p>여기는 단락입니다.</p>
+        <h1>여기는 제목 1 입니다</h1>
+        <div class="shadow">
+            <h2>여기는 제목 2 입니다</h2>
+        </div>
+        <h3>여기는 <span>제목 3</span> 입니다</h3>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <h4>여기는 <span>제목 4</span> 입니다</h4>
+        <!-- relative는 자기각 원래 있었던 자기를 기준으로 한달락씩 밀린다. -->
+    </div>
+</body>
+</html>

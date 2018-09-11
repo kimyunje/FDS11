@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR""">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Model</title>
+    <style> 
+        .content-box{
+            background: yellow;
+            width: 500px;
+            height: 300px;
+            border: 10px solid blue;
+            /* short term */
+            padding: 20px 50px 30px;
+            margin: 50px;
+            box-sizing: content-box;
+            /* 윗쪽, 양옆, 아래 */
+        }
+        /* content-boxsms boder, padding에 따라 크게가 커진다(살찌는 것) */
+        .border-box{
+            background: pink;
+            width: 500px;
+            height: 300px;
+            border: 10px solid blue;
+            /* short term */
+            padding: 20px 50px 30px;
+            margin: 50px;
+            box-sizing: border-box;
+            /* 윗쪽, 양옆, 아래 */
+        }
+        /* border-box는 border, padding에 따라 크기가 달라지지 않음(안으로 파들어감) */
+        /* margin의 투명한 특성 때문에 위의 마진 50과 아래 마진 50이 통합되는 경우가 된다. */
+    </style>
+    <!-- 임베디드 스타일 시트. -->
+</head>
+<body>
+    <div class="content-box">콘텐츠 박스</div>
+    <div class="border-box">보더 박스</div>
+</body>
+</html>
