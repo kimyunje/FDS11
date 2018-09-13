@@ -1,3 +1,5 @@
+@import url("https://raw.githubusercontent.com/daneden/animate.css/master/animate.css");
+@charset "utf-8";
 /* normalize 코드 */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css");
 /* noto sans 폰트 코드 */
@@ -40,7 +42,7 @@ ul {
 /* 목록 사이의 기호를 생략한다. ol은 음성브라우저에서 읽어줄 때는 문제가 생긴다. */
 table {
 	border-collapse: collapse;
-	border-spacing: 0;
+	border-spacing: 0;F
 }
 /* cell spacing을 없애려고border spaceing으로 없앤다. 
 셀간의 간격을 융합을 하기 위해서 border-collappse로 설정한다. */
@@ -82,10 +84,21 @@ html{
 
 body{
   color: #181818;
-  background-color: #fff;
+  /* background-color: #aaa;
+  background-image: url("images/bg_flower.png"), linear-gradient(to bottom, #aaa, #eee);
+  background-repeat: no-repeat; */
+  /* 앞은 이미지 뒤는 그라디언트 */
+  /* background-position: 50% 0, 100px 50px;
+  background-size: 1000px 500px;
+  background-attachment: fixed; */
+  background: url("images/bg_flower.png") no-repeat 50% 0, 
+  linear-gradient(to bottom, #aaa, #eee);
+  background-color: yellow;
+  /* 단추 표기는 세트가 1개 일 때만 쓸 수 있다. 
+  만약 두개 하려면 배경색은 따로 빼줘야 한다. 이 때 배경색은 뒤에 나와야 한다. */
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
-  font-size: 1.4rem
+  font-size: 1.4rem;
 }
 /* 노토 산스가 없다면 산세리프로 하시오 */
 a{
@@ -100,9 +113,7 @@ a{
 *, *::before, *::after{
   box-sizing: border-box;
 }
-.container{
-  background-color: #aaa;
-}
+
 .header, .visual, .main, .slogan, .footer{
   width: 940px;
   margin: 0 auto;
@@ -278,11 +289,96 @@ a{
 }
 /* 비주얼 */
 .visual{
-  background-color: lime;
+  position: relative;
+  background-color: transparent;
+  min-height: 120px;
+  border-top: 2px solid transparent;
+  /* textAni의 마진이 바깥으로 먹는 것을 막음 */
+  /* 1번 overflow: hidden; */
+  /* display: inline-block; */
+/* 애니메이션이 넘치는 것을 막아주는 코드 */
+  /* background-color: pink; */
+
 }
+@keyframes flowerAni{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes textAni{
+  /* from{}
+  to{} */
+  0%{
+    font-size: 12px;
+    color: rgba(0, 0,0, 0.2);
+    /*1번 마진을 쓰는 방법 margin: 0; */
+    /*2번 padding: 0; */
+    /*3번 transform: translate(0,0) */
+    left:0;
+    top: 0;
+  }
+  100%{
+    font-size: 24px;
+    color: rgba(0, 0,0, 1);
+    /* margin: 75px 0 0 400px; */
+    /* padding: 75px 0 0 400px; */
+    /* transform: translate(400px, 75px) */
+    /* block 상자처리 되기 떄문에 가로 스크롤이 된다. */
+    left: 400px;
+    top: 75px;
+  }
+}
+.visual::before, .visual::after{
+  /* animation-name: flowerAni;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+  animation: flowerAni 2s forwards infinite alternate cubic-bezier(0.8,-0.02, 0.25, 1);
+/* 느리게 출발했다가 빠르게 가다가 나중에 다시 느리게 간다. */
+    /* 선언값의 순서가 중요하지 않다. 하지만 듀레이션이 딜레이보다 선행해야 한다.*/
+    /* pause는 언제 쓰임? 특정요소를 선택하면 애니메이션이 멈추도록 만든다. */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:0;
+  background: no-repeat;
+}
+.visual::before{
+  background-image: 
+  url("images/ani_flower_01.png"), 
+  url("images/ani_flower_02.png"); 
+  background-position: 0 -10px, 670px 0;
+}
+.visual::after{
+  animation-delay: 1s;
+  /* 여기에 animation으로 하면 안된다. */
+  background-image:
+  url("images/ani_flower_03.png"),
+  url("images/ani_flower_04.png");
+  background-position: 300px 0, 800px 15px;
+}
+
+.visual-text{
+  position: absolute;
+  z-index: 100;
+  /* 노말 플로우기 때문에 after와 bdfore 사이에온다. */
+  animation-name: textAni;
+  animation-duration:3000ms;
+  animation-fill-mode: forwards;
+  /* animation: swing 3000ms; */
+  /* 애니메이션이 완성된 시점에서 멈춤 */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 /* 메인 */
 .main{
-  background-color: blue;
+  background-color: #fff;
   height: 60vh;
   display: flex;
   flex-direction: row;
@@ -290,11 +386,11 @@ a{
   padding: 30px 0;
 }
 .group1{
-  background-color: skyblue;
+  background-color: yellow;
   width: 250px;
 }
 .group2{
-  background-color: skyblue;
+  background-color: pink;
   width: 380px;
 }
 .group3{
