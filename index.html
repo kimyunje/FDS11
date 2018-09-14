@@ -105,7 +105,31 @@
             <p class="visual-text">Web Standards &amp; Accessibility</p>
         </div>
         <main class="main" id="main">
-            <div class="group group1">그룹1</div>
+            <div class="group group1">
+                <section class="login">
+                    <h2 class="login-heading">로그인</h2>
+                    <form action="https://formspree.io/stoneaxe002@gmail.com" class="login-form" method="POST">
+                        <fieldset>
+                            <legend>회원 로그인 폼</legend>
+                            <div class="user-id">
+                                <label for="user-id">아이디</label><input type="e-mail" id="user-id" name="user-id" required  placeholder="이메일 주소">
+                                <!-- 공백이 없도록 둘을 띄어쓰지 않는다. -->
+                                <!-- id와 name은 다르다. name은 나중에 정보를 보낼 때 쓴다. id는 스타일링을 할 때 쓴다. -->
+                                <!-- reauired는 필수로 입력하는 요소를 알려줌 -->
+                                <!-- maxlength는 6자리 이상은 안된다는 얘기 -->
+                            </div>
+                            <div class="user-pw">
+                                <label for="user-pw">아이디</label><input type="password" id="user-pw" name="user-pw" required maxlength="8" placeholder="8자리 이하">
+                            </div>
+                            <button type="submit" class="btn-login">로그인</button>
+                        </fieldset>
+                    </form>
+                    <ul class="sign">
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">아이디/비밀번호 찾기</a></li>
+                    </ul>
+                </section>
+            </div>
             <div class="group group2">그룹2</div>
             <div class="group group3">그룹3</div>
             <!-- <div class="clearfix"></div> -->
