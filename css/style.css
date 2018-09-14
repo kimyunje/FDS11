@@ -54,7 +54,7 @@ table {
   clear: both;
 }
 /* 숨김 콘텐츠 */
-.readable-hidden, .skip-nav{
+.readable-hidden, .skip-nav, legend{
   background: red;
   /* display: none;
   visibility: hidden; */
@@ -379,14 +379,15 @@ a{
 /* 메인 */
 .main{
   background-color: #fff;
-  height: 60vh;
+  height: 450px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 30px 0;
 }
+
 .group1{
-  background-color: yellow;
+  /* background-color: yellow; */
   width: 250px;
 }
 .group2{
@@ -396,6 +397,76 @@ a{
 .group3{
   background-color: skyblue;
   width: 190px;
+}
+/* 로그인 */
+.login{
+  background-color: #f37330;
+  box-shadow: 5px 5px 0 0 #aaa;
+  /* 0 0은 그림자 번짐 */
+  padding: 10px;
+  border-radius: 10px;
+}
+.login-heading{
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* padding-left: 10px;
+  margin-left: 10px; */
+  text-indent: 10px;
+  /* 들여쓰기 음수로 쓰면 내어 쓰기. block 상자에만 적용가능 들여쓰기는 상자 크기에 영향 끼치지 않는다. */
+  color: #ff0;
+}
+
+
+.login-form{
+  background: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+.login-form label{
+  background: lime;
+  display: inline-block;
+  width: 4em;
+}
+.login-form input{
+  width:100px; 
+  height:22px;
+}
+/* 얘는 기본적으로 inline-block이다. 
+html에서 사이즈를 줄 수 있는 태그는 다 inline-block이다. ex)img, input */
+
+.login-form fieldset{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position:relative;
+  background: yellow;
+}
+/* fieldset으로 하면 선택이 안된다. */
+/* label{
+  display: inline-block;
+  width: 4em;
+} */
+/* label은 그냥 해도 선택되는데? */
+.btn-login{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 50px;
+  height:50px;
+  color:#fff;
+  font-size: 1.2rem;
+  display: flex;
+  background-color: hsla(0, 70%, 65%, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sign{
+  text-align: right;
+}
+.sign li{
+  display: inline-block;
 }
 /* 슬로건 */
 .slogan{
