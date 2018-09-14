@@ -493,6 +493,57 @@ html에서 사이즈를 줄 수 있는 태그는 다 inline-block이다. ex)img,
   display: inline-block;
 }
 /* 자간을 조절하는 태그 */
+/* 유효성 검사 */
+.validation-list{
+  margin-top: 20px;
+}
+.validation-list a{
+  display: block;
+  border: 1px solid #999;
+  border-radius: 15px;
+  margin-top: 10px;
+/* 마진 병합 효과 */
+  height: 30px;
+  line-height: 30px;
+  text-indent: 45px;
+  background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #aaa, #eee);
+  /* padding: 5px 0; */
+  /* display: flex;
+  align-items: center; */
+}
+
+.validation a{
+
+}
+/* 내가 짠 코드 */
+/* .validation-list{
+  padding: 20px 0;
+}
+.validation-list li:nth-child(1){
+  margin-bottom: 10px;
+}
+.validation-list li{
+background: url("images/validation_icon.png") no-repeat 10px, linear-gradient(to bottom, #aaa, #eee);
+height: 30px;
+border-radius: 15px;
+border: 1px solid #808080;
+text-align: center;
+line-height: 30px;
+} */
+/* 용어 */
+.term{
+  border: #999 solid 1px;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #aaa, #eee); 
+  padding: 10px;
+  margin-top:  20px;
+}
+.term-heading{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 /* 슬로건 */
 .slogan{
   background-color: lime;
