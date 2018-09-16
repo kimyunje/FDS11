@@ -42,7 +42,7 @@ ul {
 /* 목록 사이의 기호를 생략한다. ol은 음성브라우저에서 읽어줄 때는 문제가 생긴다. */
 table {
 	border-collapse: collapse;
-	border-spacing: 0;F
+	border-spacing: 0;
 }
 /* cell spacing을 없애려고border spaceing으로 없앤다. 
 셀간의 간격을 융합을 하기 위해서 border-collappse로 설정한다. */
