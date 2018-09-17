@@ -375,6 +375,7 @@ a{
   /* 애니메이션이 완성된 시점에서 멈춤 */
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+/* 용어 */
 
 /* 메인 */
 .main{
@@ -391,7 +392,6 @@ a{
   width: 250px;
 }
 .group2{
-  background-color: pink;
   width: 380px;
 }
 .group3{
@@ -530,25 +530,175 @@ border: 1px solid #808080;
 text-align: center;
 line-height: 30px;
 } */
-/* 용어 */
+/* 웹 관련 용어 */
 .term{
-  border: #999 solid 1px;
-  border-radius: 10px;
-  background-image: linear-gradient(to bottom, #aaa, #eee); 
-  padding: 10px;
-  margin-top:  20px;
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #aaa;
+  background: linear-gradient(to bottom, #bbb, #eee);
 }
 .term-heading{
-  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+.term-list{
+  margin-top: 10px;
+}
+.term-list-subject, .term-list-brief{
+  width: 145px;
+}
+.term-list-subject{
+  color: #296897;
+}
+.term-list-thumbnail img{
+  display: block;
+}
+.term-list-brief{
+  margin-top: 10px;
+}
+.term-list div{
+  margin-top: 10px;
+}
+/* 홀수 */
+.term-list div:nth-child(odd) .term-list-subject,
+.term-list div:nth-child(odd) .term-list-brief{
+  float: right;
+}
+.term-list div:nth-child(odd) .term-list-thumbnail{
+  float: left;
+}
+/* 짝수 */
+.term-list div:not(:nth-child(odd)) .term-list-subject,
+.term-list div:not(:nth-child(odd)) .term-list-brief{
+  float: left;
+}
+.term-list div:not(:nth-child(odd)) .term-list-thumbnail{
+  float: right;
+}
+/* 검색 폼 */
+/* 검색 폼 */
+.search{
+  background: #aaa;
+  background: linear-gradient(to bottom, #bbb, #eee);
+  border: 1px solid #aaa;
+  border-bottom: 0;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px;
+}
+.search-form fieldset{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.search-form fieldset *{
+  vertical-align: middle;
+}
+.search-form label::before{
+  content: "z";
+  font-family: "WebcafeIcon";
+  position: relative;
+  top: 2px;
+}
+.search-form input[type="search"]{
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 1px 1px 1px 5px;
+  height: 22px;
+  width: 200px;
+  margin: 0 3px;
+}
+.btn-search{
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 1.3rem;
+  color: #fff;
+  background: #333;
+  height: 22px;
 }
 
+/* 공지사항 및 자료실 */
+/* 공지사항 및 자료실 */
+.board{
+  margin-top: 20px;
+  position: relative;
+}
+.tab{
+  cursor: pointer;
+  background: #aaa;
+  background: linear-gradient(to bottom, #bbb, #eee);
+  color: #333;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+}
+.tab-act .tab{
+  background: #fff;
+  color: #F37335;
+  border-color: #F37335 #F37335 #fff #F37335;
+}
+.notice-heading{
+  left: 0;
+}
+.pds-heading{
+  left: 73px;
+}
+.notice-list, .pds-list, .notice-more, .pds-more{
+  display: none;
+}
+.tab-act .notice-list, .tab-act .pds-list,
+.tab-act .notice-more, .tab-act .pds-more{
+  display: block;
+}
+.notice-list, .pds-list{
+  padding-top: 45px;
+}
+.notice-list li, .pds-list li{
+  margin-bottom: 10px;
+  position: relative;
+}
+.notice-list a, .pds-list a{
+  display: block;
+  width: calc(100% - 80px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notice-list a::before, .pds-list a::before{
+  content: "b";
+  font-family: "WebcafeIcon";
+  position: relative;
+  top: 2px;
+}
+.notice-list time, .pds-list time{
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* float: right; */
+}
+.notice-more, .pds-more{
+  position: absolute;
+  top: 0;
+  right: -8px;
+  padding: 8px;
+}
+.notice-more::before, .pds-more::before{
+  content: "p";
+  font-family: "webcafeIcon";
+  position: relative;
+  top: 2px;
+  color: #0f0;
+}
 /* 슬로건 */
 .slogan{
   background-color: lime;
   height: 10vh;
 }
+.term
 /* 푸터 */
 .footer-bg{
   background-color: purple;

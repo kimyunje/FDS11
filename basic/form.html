@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 form 관련 요소와 속성</title>
+</head>
+<body>
+  <form action="https://formspree.io/seulbinim@gmail.com" method="POST">
+    <fieldset>
+      <legend>HTML5 Form</legend>
+      <p>
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" maxlength="8" required>
+      </p>
+      <p>
+        성별<br>
+        <label for="female">여자</label>
+        <input type="radio" value="female" id="female" name="gender" checked>
+        <label for="male">남자</label>
+        <input type="radio" value="male" id="male" name="gender">
+      </p>
+      <p>
+        사용언어<br>
+        <label for="html">HTML</label>
+        <input type="checkbox" value="html" id="html" name="language" checked>
+        <label for="css">CSS</label>
+        <input type="checkbox" value="css" id="css" name="language">
+        <label for="js">Javascript</label>
+        <input type="checkbox" value="javascript" id="js" name="language">
+      </p>
+      <p>
+        <label for="email">이메일 주소</label>
+        <input type="email" id="email" name="email" placeholder="guest@multicampus.co.kr">
+      </p>
+      <p>
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" name="phone">
+      </p>
+      <p>
+        <label for="twitter">트위터</label>
+        <input type="url" id="twitter" name="twitter">
+      </p>
+      <p>
+        <label for="search">검색</label>
+        <input type="search" list="recommend" id="search" name="search">
+        <datalist id="recommend">
+          <option value="HTML5" label="ML">HTML5 Markup</option>
+          <option value="CSS3" label="SS">CSS3 Style</option>
+          <option value="Javascript" label="JS">Javascript</option>
+        </datalist>
+      </p>
+      <p>
+        <label for="caleander">달력</label>
+        <input type="datetime-local" id="calender" name="calender">
+      </p>
+      <p>
+        <label for="color">색상 선택</label>
+        <input type="color" id="color" name="color">
+      </p>
+      <p>
+        <label for="count">수량</label>
+        <input type="number" id="count" name="count" min="1" max="10" step="3">
+      </p>
+      <p>
+        <label for="age">나이</label>
+        <input type="range" id="age" name="age">
+      </p>
+      <p>
+        <label for="age2">나이</label>
+        <select name="age2" id="age2">
+          <option value="10">10대</option>
+          <option value="20">20대</option>
+          <option value="30">30대</option>
+          <option value="40">40대</option>
+          <option value="50">50대</option>
+          <option value="60">60대</option>
+        </select>
+      </p>
+      <p>
+        <label for="message">가입인사</label><br>
+        <textarea name="message" id="message" cols="50" rows="20">
+가입 인사를 남겨주세요.
+        </textarea>
+      </p>
+      <p>
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+        <input type="button" value="눌러봐!">
+      </p>
+      <p>
+        <button type="submit">전송2</button>
+        <button type="reset">취소2</button>
+        <button type="button">눌러봐2!</button>
+      </p>
+    </fieldset>
+  </form>
+</body>
+</html>
