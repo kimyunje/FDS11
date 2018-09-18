@@ -380,7 +380,7 @@ a{
 /* 메인 */
 .main{
   background-color: #fff;
-  height: 450px;
+  min-height: 450px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -395,7 +395,6 @@ a{
   width: 380px;
 }
 .group3{
-  background-color: skyblue;
   width: 190px;
 }
 /* 로그인 */
@@ -551,17 +550,24 @@ line-height: 30px;
 }
 .term-list-subject{
   color: #296897;
+  float: right;
+}
+.term-list-thumbnail{
+  width: 72px;
+  float: left;
 }
 .term-list-thumbnail img{
   display: block;
 }
 .term-list-brief{
-  margin-top: 10px;
+  background: pink;
+  overflow: hidden;
+  width: 145px;
 }
 .term-list div{
   margin-top: 10px;
 }
-/* 홀수 */
+/* 홀수
 .term-list div:nth-child(odd) .term-list-subject,
 .term-list div:nth-child(odd) .term-list-brief{
   float: right;
@@ -569,14 +575,14 @@ line-height: 30px;
 .term-list div:nth-child(odd) .term-list-thumbnail{
   float: left;
 }
-/* 짝수 */
+짝수
 .term-list div:not(:nth-child(odd)) .term-list-subject,
 .term-list div:not(:nth-child(odd)) .term-list-brief{
   float: left;
 }
 .term-list div:not(:nth-child(odd)) .term-list-thumbnail{
   float: right;
-}
+} */
 /* 검색 폼 */
 /* 검색 폼 */
 .search{
@@ -693,6 +699,162 @@ line-height: 30px;
   top: 2px;
   color: #0f0;
 }
+/* 새소식 */
+.news{
+  margin-top: 20px;
+  position: relative;
+}
+.news::before{
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa;
+  background: linear-gradient(to right, #aaa, #fff)
+}
+.news-heading{
+  font-weight: 700;
+  color: #F37335;
+  font-size: 1.5rem;
+}
+.news-article{
+  display:block;
+ margin-top: 35px;
+}
+.news-item{
+  /* padding-left: 130px;
+  position: relative;
+  min-height: 120px; */
+}
+.news-item-heading, .news-item-date, .news-item-brief{
+  width: 250px;
+  float: right;
+}
+.news-item-thumbnail{
+  /* position: absolute;
+  top: 5px;
+  left: 0; 
+  text: align*/
+}
+
+.news-more::before{
+  content: "p";
+  font-family: "WebcafeIcon";
+  position: relative;
+  top: 2px;
+  color: #0f3;
+}
+.news-more{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+.news-item-heading{
+  font-weight: 700;
+}
+.news-item-brief{
+  margin-top: 10px;
+  text-align: justify;
+}
+.news-item-thumbnail img{
+  margin-bottom: 15px;
+  box-shadow: 0 15px 25px 0 #aaa;
+}
+/* 신규 소식 및 관련 사이트*/
+.event{
+  position:relative;
+}
+.event-related{
+  background: #bbb;
+  background:linear-gradient(to bottom, #bbb, #eee);
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.event-heading, .related-heading{
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.event-heading span, .related-heading span{
+  color: #F37335;
+}
+.event-thumbnail, .event-brief{
+  margin: 10px 0;
+}
+.event-thumbnail img{
+  border: 1px solid #999;
+  box-shadow: 5px 5px 0 0 #aaa;
+}
+.btn-event{
+  height: 18px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right:0;
+}
+.btn-prev, .btn-next{
+  float: left;
+  cursor: pointer;
+  width: 19px;
+  height: 0;
+  background: transparent url("images/back_forward.png") no-repeat; 
+  padding-top:18px;
+  border:0;
+}
+.btn-next{
+  background-position: 100% 0;
+  margin-left: 5px;
+} 
+.btn-prev:focus, .btn-next:focus{
+  outline-offset: 1px solid blue;
+  outline-offset: 10vh;
+}
+
+.related{
+  border-top: solid 1px #aaa;
+  padding-top: 10px;
+}
+.related-list{
+  background: #fff;
+  margin-top: 10px;
+}
+/* .event{
+  position: relative;
+  background-image: linear-gradient(to bottom, #aaa, #eee);
+  border-radius: 10px 10px 0 0;
+}
+.event-heading, .related-heading{
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.event-heading span, .related-heading span{
+  color: #f37330;
+}
+.btn-prev, .btn-next{
+  width: 20px;
+  height: 19px;
+  background-image:url("images/back_forward.png"); 
+  text-indent: 110px;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  border:0;
+  padding:0;
+  margin:0;
+}
+.btn-prev{
+  top: 0;
+  right: 30px;
+}
+.btn-next{
+  background-position: -36px 0;
+  top: 0;
+  right: 0;
+} */
 /* 슬로건 */
 .slogan{
   background-color: lime;
