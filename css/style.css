@@ -820,6 +820,24 @@ line-height: 30px;
 .related-list{
   background: #fff;
   margin-top: 10px;
+  height: 25px;
+  line-height: 30px;
+  overflow:hidden;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  transition: height 0.5s 0s, background 0.5s 0.5s;
+}
+/* .related-list:hover, .related-list:focus{
+  height: 150px;
+  background: pink;
+} */
+.related-act{
+  height: 150px;
+  background: lime;
+}
+.related-list a{
+  display: block;
+  text-indent: 1em;
 }
 /* .event{
   position: relative;

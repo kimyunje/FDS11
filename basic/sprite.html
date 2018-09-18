@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sprtie 기법</title>
+    <style>
+    .btn{
+        background: yellow;
+    }
+    .btn span{
+        width: 20px;
+        height: 19px;
+        text-indent: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        background-image: url("../css/images/backpage_forwardpage.png"); 
+    }
+    .btn-prev{
+        background-position: 0 0;
+    }
+    .btn-next{
+        background-position: -40px 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <span class="btn-prev">이전</span>
+        <span class="btn-next">다음</span>
+    </div>
+</body>
+</html>

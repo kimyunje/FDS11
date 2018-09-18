@@ -2,9 +2,11 @@
 var item = $('.menu-item');
 var subItem = $('.sub-menu a');
 var tab = $('.tab');
+var list = $('.related-list')
 item.attr('tabindex', '0');
 tab.attr('tabindex', '0');
 subItem.attr("class", 'fas fa-angle-left');
+
 // 메인 메뉴를 위한 함수
 item.on('mouseover focusin', function(){
     item.removeClass('menu-act');
@@ -25,3 +27,15 @@ tab.on('click focusin', function(){
 });
 // this는 클릭한 tab
 // parent는 부모요소
+
+// list.hover(function(){
+//     $(this).toggleClass('related-act');
+// });
+
+//관련사이트 애니메이션을 위한 함수
+list.on('mouseover focusin',function(){
+    $(this).addClass('related-act')
+});
+list.on('mouseout focusout',function(){
+    $(this).removeClass('related-act')
+});
