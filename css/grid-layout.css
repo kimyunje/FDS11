@@ -1,0 +1,54 @@
+@charset "utf-8";
+body{
+    background: silver;
+    margin: 0;
+}
+/* 그리드 컨테이너 */
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header" "header" "header" "header" "header" "header" "header" "header" "header" "header" "header" "header";
+                        "main" "main" "main" "main" "main" "main" "main";
+    grid-template: 100px 1fr 100px/ repeat(12, 60px);
+    margin: 0 10px;
+    grid-column-gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 940;
+    height: 100%;
+    background: repeating-linear-gradient(90deg, rgba(0,0,255, 0.2) 60px, transparent 80px;
+}
+/* 헤더 */
+.header{
+    background: red;
+    /* grid-column: 1 /span 8; */
+    grid-area: header;
+}
+/* 메인 */
+.main{
+    background: orange;
+    grid-area: main;
+    /* grid-column: span 12; */
+    /* grid-row: 2; */
+    /* 마크 다운 원리에 따라서 헤더가 다 차지 하면 자연스럽게 row가 2번으로 떨어진다. */
+}
+/* 사이드 */
+.sidebar{
+    background: yellow;
+    /* grid-column: 9/ span 4;
+    grid-row: 1; */
+    grid-area: sidebar;
+}
+/* 푸터 */
+.footer{
+    background: green;
+    /* grid-column: 1/ span 12; */
+    grid-area: footer;
+}

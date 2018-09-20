@@ -2,7 +2,7 @@
 var item = $('.menu-item');
 var subItem = $('.sub-menu a');
 var tab = $('.tab');
-var list = $('.related-list')
+var list = $('.related-list');
 item.attr('tabindex', '0');
 tab.attr('tabindex', '0');
 subItem.attr("class", 'fas fa-angle-left');
